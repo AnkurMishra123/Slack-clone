@@ -46,7 +46,7 @@ const Sidebar = () => {
             <SidebarOption Icon={InboxIcon} title="Mentions & reactions" />
             <SidebarOption Icon={DraftsIcon} title="Saved items" />
             <SidebarOption Icon={BookmarkBorderIcon} title="Channel browser" />
-            <SidebarOption Icon={PeopleAltIcon} title="People and User Group" />
+            {/* <SidebarOption Icon={PeopleAltIcon} title="People and User Group" /> */}
             <SidebarOption Icon={AppsIcon} title="Apps" />
             <SidebarOption Icon={FileCopyIcon} title="File Browser" />
             <SidebarOption Icon={ExpandLessIcon} title="Show Less" />
@@ -54,9 +54,7 @@ const Sidebar = () => {
             {/* <SidebarOption Icon={ExpandLessIcon} title="Show Less" /> */}
             <SidebarOption Icon={ExpandMoreIcon} title="Channels" />
             <hr />
-            <SidebarOption Icon={AddIcon} title="Add Channels" />
-            {/* {Connect to Db and list all the channels} */}
-            {/* <SidebarOptions ... />*/}
+            <SidebarOption Icon={AddIcon} addChannelOption title="Add Channels" />
             {channels.map((channel) => (
                 <SidebarOption title={channel.name} id={channel.id} />
             ))}

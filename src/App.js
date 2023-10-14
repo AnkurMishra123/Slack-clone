@@ -2,7 +2,7 @@ import './App.css';
 import Header from "./Header.js"
 import Sidebar from './Sidebar.js';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
+import Chat from './Chat.js';
 
 function App() {
   return (
@@ -13,12 +13,14 @@ function App() {
           <Sidebar />
           {/* {React-Router ->Chat Screen} */}
           <Routes>
-            <Route path='/room/:roomId' element="<h1>Hello second Screen</h1>"/>
-              {/* <Chat /> */}
-          </Routes>
-          <Routes>
-            <Route path='/' element="Home screen"/>
-              {/* <Chat /> */}
+            <Route path='/room/:roomId' element={<Chat />} />
+            {/* <Chat /> */}
+            {/* </Route> */}
+
+            <Route path='/' element="Home screen" />
+
+            {/* </Route> */}
+            {/* <Chat /> */}
           </Routes>
         </div>
       </Router>
